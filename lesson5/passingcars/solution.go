@@ -27,10 +27,9 @@ func Solution(a []int) int {
 }
 
 func prefixSums(a []int) []int {
-	n := len(a)
-	sums := make([]int, n+1)
-	for i := 1; i < n+1; i++ {
-		sums[i] = sums[i-1] + a[i-1]
+	sum := make([]int, len(a)+1)
+	for i, item := range a {
+		sum[i+1] = sum[i] + item
 	}
-	return sums
+	return sum
 }
