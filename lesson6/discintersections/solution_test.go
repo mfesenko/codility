@@ -38,7 +38,7 @@ func TestSolution(t *testing.T) {
 func TestSolutionReturnsMinusOneWhenTheAmountOfIntersectionsIsTooHigh(t *testing.T) {
 	n := 100000
 	a := make([]int, n)
-	for i := 0; i < n; i++{
+	for i := 0; i < n; i++ {
 		a[i] = 10000 + i
 	}
 	assert.Equal(t, -1, Solution(a))
